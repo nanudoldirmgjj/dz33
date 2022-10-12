@@ -11,11 +11,13 @@ let n = 49;
 if (n <= 100 && n >= 0){
     console.log('yes');
 }
-// 2 need to change
-if (n <= 100 && n >= 0 || n < 101 && n > -1){
-    console.log('yes');
+// 2 
+let b = 49;
+if (n < 0 || n > 100){
+    console.log('no');
+} else {
+  console.log('yes')
 }
-
 
 
 /*
@@ -62,7 +64,7 @@ let arrr = [
     94,
     '03',
 ];
-for(i = 1; i < arrr.length; i +=2) {
+for(let i = 1; i < arrr.length; i +=2) {
     console.log(arrr[i]);
 }
 
@@ -178,7 +180,12 @@ for (let num of numbers) {
 console.log(max);
 
 //5
-console.log(numbers.indexOf(max));
+for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] == max) {
+        console.log(i);
+    }
+}
+
 
 
 /*
@@ -208,7 +215,7 @@ for(let a of arr) {
 let nums = [5, 4, 3, 8, 0];
 let limit = 5;
 let newNums = [];
-for (num of nums) {
+for (let num of nums) {
     if (num >= limit) {
         newNums.push(num);
     }
@@ -255,7 +262,7 @@ let vegetables = ["морковь", "баклажан", "репа", "топин�
 let vegetables = ["морковь", "баклажан", "репа", "топинамбур"];
 
 let vegan = [];
-for (i = 0; i < vegetables.length; i++) {
+for (let i = 0; i < vegetables.length; i++) {
     vegan.push(        {
             'word': vegetables[i],
             'length': vegetables[i].length,
@@ -265,6 +272,6 @@ for (i = 0; i < vegetables.length; i++) {
   console.log(vegan);
 
 //2
-for (veg of vegan) {
+for (let veg of vegan) {
     console.log(veg.word + ' - ' + veg.length);
 }
